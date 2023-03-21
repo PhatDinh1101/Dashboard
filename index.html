@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Admin routine</title>
+     <meta name="robots" content="noindex, nofollow">
+     <meta content="" name="description">
+     <meta content="" name="keywords">
+     <link rel="icon" type="img/x-icon" href="https://routine.vn/media/favicon/default/output-onlinejpgtools.png" />
+     <link rel="shortcut icon" type="img/x-icon"
+          href="https://routine.vn/media/favicon/default/output-onlinejpgtools.png" />
+     <link href="https://fonts.gstatic.com" rel="preconnect">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+          integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/bootstrap-icons.css" rel="stylesheet">
+     <link href="css/boxicons.min.css" rel="stylesheet">
+     <link href="css/quill.snow.css" rel="stylesheet">
+     <link href="css/quill.bubble.css" rel="stylesheet">
+     <link href="css/remixicon.css" rel="stylesheet">
+     <link href="css/simple-datatables.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+     <header id="header" class="header fixed-top d-flex align-items-center">
+          <div class="d-flex align-items-center justify-content-between">
+               <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="https://routine.vn/media/logo/websites/1/ezgif-7-ee007e6332a0_2x.png" alt="">
+               </a>
+          </div>
+          <div class="d-flex align-items-center justify-content-between toggle-icon">
+               <i class="fa-solid fa-bars"></i>
+          </div>
+          <nav class="header-nav ms-auto">
+               <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown pe-3">
+                         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
+                              data-bs-toggle="dropdown"> <img src="img/profile-img.jpg" alt="Profile"
+                                   class="rounded-circle"> <span
+                                   class="d-none d-md-block dropdown-toggle ps-2">Malik</span> </a>
+                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                              <li class="dropdown-header">
+                                   <h6>Malik</h6>
+
+                              </li>
+                              <li>
+                                   <hr class="dropdown-divider">
+                              </li>
+                              <li> <a class="dropdown-item d-flex align-items-center" href="#"> <i
+                                             class="bi bi-person"></i> <span>My Profile</span> </a></li>
+                              <li>
+                                   <hr class="dropdown-divider">
+                              </li>
+                              <li> <a class="dropdown-item d-flex align-items-center" href="#"> <i
+                                             class="bi bi-gear"></i> <span>Account Settings</span> </a></li>
+                              <li>
+                                   <hr class="dropdown-divider">
+                              </li>
+                              <li> <a class="dropdown-item d-flex align-items-center" href=""> <i
+                                             class="bi bi-question-circle"></i> <span>Need Help?</span> </a></li>
+                              <li>
+                                   <hr class="dropdown-divider">
+                              </li>
+                              <li> <a class="dropdown-item d-flex align-items-center" href="#"> <i
+                                             class="bi bi-box-arrow-right"></i> <span>Sign Out</span> </a></li>
+                         </ul>
+                    </li>
+               </ul>
+          </nav>
+     </header>
+     <aside id="sidebar" class="sidebar">
+          <ul class="sidebar-nav" id="sidebar-nav">
+               <li class="nav-heading">Main Menu</li>
+               <li class="nav-item"> <a class="nav-link " href="#"> <i class="ri-home-2-fill"></i>
+                         <span>Home</span>
+                    </a></li>
+               <li class="nav-item"> <a class="nav-link collapsed" href="#"> <i class="bi bi-bag"></i>
+                         <span>Job</span> </a></li>
+               <li class="nav-item"> <a class="nav-link collapsed" href="#"> <i class="bi bi-gear"></i>
+                         <span>Settings</span> </a></li>
+               <li class="nav-item"> <a class="nav-link collapsed" href="#"> <i class="bi bi-calendar-minus-fill"></i>
+                         <span>Schedule</span> </a></li>
+               <li class="nav-heading">Insight</li>
+               <hr>
+
+               <li class="nav-item"> <a class="nav-link collapsed" href="#"> <i class="bi bi-bell"></i>
+                         <span>Notifications</span> </a></li>
+               <li class="nav-item"> <a class="nav-link collapsed" href="#"> <i class="bi bi-chat-text"></i>
+                         <span>Messages</span>
+                         <span class="message-count">26</span> </a></li>
+               <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#"> <i
+                              class="bi bi-journal-text"></i><span>Forms</span><i
+                              class="bi bi-chevron-down ms-auto"></i> </a>
+                    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                         <li> <a href=""> <i class="bi bi-circle"></i><span>Form Elements</span> </a>
+                         </li>
+                         <li> <a href=""> <i class="bi bi-circle"></i><span>Form Layouts</span> </a>
+                         </li>
+                         <li> <a href=""> <i class="bi bi-circle"></i><span>Form Editors</span> </a>
+                         </li>
+                         <li> <a href=""> <i class="bi bi-circle"></i><span>Form Validation</span>
+                              </a></li>
+                    </ul>
+               </li>
+               <li class="nav-item">
+                    <div class="dropdown">
+                         <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <img style="border-radius: 50px;" src="img/profile-img.jpg" alt="dropdown image"
+                                   class="img-responsive">
+                              <span class="caret">Hello, Mallik</span>
+                         </button>
+                         <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                         </ul>
+                    </div>
+               </li>
+          </ul>
+
+     </aside>
+
+     <main id="main" class="main">
+          <div class="icon-bar">
+               <a href="#" class="facebook"><i class="fa-brands fa-google"></i></a>
+               <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+               <a href="#" class="google"><i class="fa fa-google"></i></a>
+               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+               <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+          </div>
+          <div class="pagetitle">
+               <div class="pagetitle-logo">
+                    <div class="pagetitle-lp">
+                         <img class="page-logo"
+                              src="https://routine.vn/media/favicon/default/output-onlinejpgtools.png">
+                         <div class="info">
+                              <h1>eCommerce Report</h1>
+                              <h5>There are the stats for </h5>
+                         </div>
+                         <select class="select-impression">
+                              <option>Today</option>
+                              <option value="last7days">Last 7 days</option>
+                              <option value="last30days">Last 30 days</option>
+                              <option value="thismonth">This Month</option>
+                              <option value="thisquarter">This Quarter</option>
+                              <option value="thisyear">This Year</option>
+                              <option value="custome">Custome</option>
+
+                         </select>
+                         <select class="select-status">
+                              <option value="All">All</option>
+                              <option value="Websites">Websites</option>
+                              <option value="Shopee">Shopee</option>
+                              <option value="Lazada">Lazada</option>
+                         </select>
+                    </div>
+
+                    <div class="btn btn-add-new-job">
+                         <button> <i class="bi bi-plus"></i> <span> Add new job</span></button>
+                    </div>
+               </div>
+          </div>
+          <section class="section dashboard">
+               <div class="row">
+                    <div class="col-lg-12">
+                         <div class="row">
+                              <div class="col-xxl-3 col-md-6 col-lg 3">
+                                   <div class="card info-card sales-card">
+                                        <div class="filter">
+                                             <div class="filter-icon">
+                                                  <img src="img/cartoon-eyes.png">
+                                             </div>
+                                        </div>
+                                        <div class="card-body">
+                                             <h5 class="card-title">View Our Job</h5>
+                                             <div class="d-flex align-items-center">
+                                                  <div class="ps-3">
+                                                       <h6>242.5k</h6>
+
+                                                  </div>
+                                                  <div class="ps-4">
+                                                       <span class="small pt-1 fw-bold">12%</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="col-xxl-3 col-md-6 col-lg 3">
+                                   <div class="card info-card transaction-card">
+                                        <div class="filter">
+                                             <div class="filter-icon">
+                                                  <img src="img/suitcase.png">
+                                             </div>
+                                        </div>
+                                        <div class="card-body">
+                                             <h5 class="card-title">View Our Job</h5>
+                                             <div class="d-flex align-items-center">
+                                                  <div class="ps-3">
+                                                       <h6>145</h6>
+
+                                                  </div>
+                                                  <div class="ps-4">
+                                                       <span class="small pt-1 fw-bold">12%</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="col-xxl-3 col-md-6 col-lg 3">
+                                   <div class="card info-card apt-card">
+                                        <div class="filter">
+                                             <div class="filter-icon">
+                                                  <img src="img/confetti.png">
+                                             </div>
+                                        </div>
+                                        <div class="card-body">
+                                             <h5 class="card-title">View Our Job</h5>
+                                             <div class="d-flex align-items-center">
+                                                  <div class="ps-3">
+                                                       <h6>145</h6>
+                                                  </div>
+                                                  <div class="ps-4">
+                                                       <span class="small pt-1 fw-bold">12%</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="col-xxl-3 col-md-6 col-lg 3">
+                                   <div class="card info-card unitsold-card">
+                                        <div class="filter">
+                                             <div class="filter-icon">
+                                                  <img src="img/rocket.png">
+                                             </div>
+                                        </div>
+                                        <div class="card-body">
+                                             <h5 class="card-title">View Our Job</h5>
+                                             <div class="d-flex align-items-center">
+                                                  <div class="ps-3">
+                                                       <h6>145</h6>
+                                                  </div>
+                                                  <div class="ps-4">
+                                                       <span class="small pt-1 fw-bold">12%</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-lg-12">
+                         <div class="row">
+                              <div class="col-lg-8">
+                                   <div class="col-12">
+                                        <div class="card">
+                                             <div class="filter">
+                                                  <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                                            class="bi bi-three-dots"></i></a>
+                                                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                       <li class="dropdown-header text-start">
+                                                            <h6>Filter</h6>
+                                                       </li>
+                                                       <li><a class="dropdown-item" href="#">Today</a></li>
+                                                       <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                       <li><a class="dropdown-item" href="#">This Year</a></li>
+                                                  </ul>
+                                             </div>
+                                             <div class="card-body">
+                                                  <h5 class="card-title">
+                                                       <div class="img">
+                                                            <img src="img/bar-chart.png" alt="">
+                                                            Impression
+                                                       </div>
+                                                  </h5>
+                                                  <div class="chartCard">
+                                                       <div class="chartBox">
+                                                            <canvas style="height:100vh; width:80vw"
+                                                                 id="myChart"></canvas>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-12">
+                                        <div class="card recent-sales overflow-auto">
+                                             <div class="select-box">
+                                                  <select class="option">
+                                                       <option value="text">All Activity </option>
+                                                       <option value="text">text</option>
+                                                       <option value="text">text</option>
+                                                  </select>
+                                                  <i class="bi bi-chevron-compact-down"></i>
+                                             </div>
+                                             <div class="card-body">
+                                                  <h5 class="card-title">
+                                                       <div class="img">
+                                                            <img src="img/bar-chart.png" alt="">
+                                                            Activity Feed
+                                                       </div></span>
+                                                  </h5>
+                                                  <div class="row">
+                                                       <div class="col-xxl-6 col-md-6">
+                                                            <div class="topic">
+                                                                 <h5>Trình duyệt phổ biến</h5>
+                                                            </div>
+                                                            <hr class="solid1">
+                                                            </h5>
+                                                            <div id="brownser" class="echart">
+                                                                 <div class="trafficChartBox">
+                                                                      <canvas id="trafficChart"></canvas>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-xxl-6 col-md-6">
+                                                            <div class="topic">
+                                                                 <h5>Nền tảng thiết bị</h5>
+                                                            </div>
+                                                            <hr class="solid1">
+                                                            </h5>
+                                                            <div id="mobile" class="echart">
+                                                                 <div class="mobileChartBox">
+                                                                      <canvas id="mobileChart"></canvas>
+                                                                 </div>
+                                                                 <div class="mobileChart_Box">
+                                                                      <div class="mobileChart_note">
+                                                                           <img src="img/monitor.png" alt="">
+                                                                           <div class="mobileChart_text">
+                                                                                <span>MÁY TÍNH</span>
+                                                                                <p>80%</p>
+                                                                           </div>
+                                                                      </div>
+                                                                      <div class="mobileChart_note">
+                                                                           <img src="img/tablet.png" alt="">
+                                                                           <div class="mobileChart_text">
+                                                                                <span>MÁY TÍNH BẢNG</span>
+                                                                                <p>10%</p>
+                                                                           </div>
+                                                                      </div>
+                                                                      <div class="mobileChart_note">
+                                                                           <img src="img/smartphone.png" alt="">
+                                                                           <div class="mobileChart_text">
+                                                                                <span>ĐIỆN THOẠI</span>
+                                                                                <p>10%</p>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="col-lg-4">
+                                   <div class="card">
+                                        <div class="filter">
+                                             <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                                       class="bi bi-three-dots"></i></a>
+                                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                  <li class="dropdown-header text-start">
+                                                       <h6>Filter</h6>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Today</a></li>
+                                                  <li><a class="dropdown-item" href="#">Last 7 days</a></li>
+                                                  <li><a class="dropdown-item" href="#">Last 30 days </a></li>
+                                                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                  <li><a class="dropdown-item" href="#">This Quarter</a></li>
+                                                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                                                  <li><a class="dropdown-item" href="#">Custome</a></li>
+                                             </ul>
+                                        </div>
+                                        <div class="card-body">
+                                             <h5 class="card-title">
+                                                  <div class="img">
+                                                       <img src="img/target.png" alt="">
+                                                       Target Archived
+                                                  </div>
+                                             </h5>
+                                             <div id="radialBarChart"></div>
+                                             <script>document.addEventListener("DOMContentLoaded", () => {
+                                                       new ApexCharts(document.querySelector("#radialBarChart"), {
+                                                            series: [68],
+                                                            chart: {
+                                                                 type: 'radialBar',
+                                                                 offsetY: -20,
+                                                                 sparkline: {
+                                                                      enabled: true
+                                                                 }
+                                                            },
+                                                            plotOptions: {
+                                                                 radialBar: {
+                                                                      startAngle: -90,
+                                                                      endAngle: 90,
+                                                                      track: {
+                                                                           background: "#e7e7e7",
+                                                                           strokeWidth: '97%',
+                                                                           margin: 5, // margin is in pixels
+                                                                           dropShadow: {
+                                                                                enabled: true,
+                                                                                top: 2,
+                                                                                left: 0,
+                                                                                color: '#999',
+                                                                                opacity: 1,
+                                                                                blur: 2
+                                                                           }
+                                                                      },
+                                                                      dataLabels: {
+                                                                           name: {
+                                                                                fontSize: '22px',
+                                                                                show: false,
+                                                                           },
+                                                                           value: {
+                                                                                offsetY: -2,
+                                                                                fontSize: '22px'
+                                                                           }
+                                                                      }
+                                                                 }
+                                                            },
+                                                            grid: {
+                                                                 padding: {
+                                                                      top: -10
+                                                                 }
+                                                            },
+                                                            fill: {
+                                                                 type: 'gradient',
+                                                                 gradient: {
+                                                                      shade: 'light',
+                                                                      shadeIntensity: 0.4,
+                                                                      inverseColors: false,
+                                                                      opacityFrom: 1,
+                                                                      opacityTo: 1,
+                                                                      stops: [0, 50, 53, 91]
+                                                                 },
+                                                            },
+                                                            labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+                                                       }).render();
+                                                  });
+                                             </script>
+                                             <div class="text-chart">
+                                                  <span>You definitely need to make an effort to reach your goal</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="card">
+                                        <div class="filter">
+                                             <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                                       class="bi bi-three-dots"></i></a>
+                                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                  <li class="dropdown-header text-start">
+                                                       <h6>Filter</h6>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Doanh thu từ cao đến
+                                                            thấp</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Doanh thu từ thấp đến
+                                                            cao</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Số lượng bán từ cao đến
+                                                            thấp</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Số lượng bán từ thấp đến
+                                                            cao</a>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                        <div class="card-body pb-0">
+                                             <h5 class="card-title">
+                                                  <div class="img">
+                                                       <img src="img/briefcase.png" alt="">
+                                                       Top Seller buy PGCode
+                                                  </div>
+                                             </h5>
+                                             <div class="dataTable-wrapper">
+                                                  <table class="table table-striped">
+                                                       <tr class="bg-info">
+                                                            <th></th>
+                                                            <th data-column="pgcode" data-order="desc">PGCode
+                                                            </th>
+                                                            <th data-column="quanlity" data-order="desc">Quantity
+                                                            </th>
+                                                            <th data-column="revenue" data-order="desc">Revenue
+                                                            </th>
+                                                       </tr>
+
+                                                       <tbody id="myTable">
+
+                                                       </tbody>
+                                                  </table>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-12">
+                         <div class="row">
+                              <div class="col-12">
+                                   <div class="card recent-sales overflow-auto">
+                                        <div class="select-box">
+                                             <select class="option">
+                                                  <option value="text">All Activity </option>
+                                                  <option value="text">Bán chạy nhất</option>
+                                                  <option value="text">Sản phẩm nổi bật</option>
+                                             </select>
+                                             <i class="bi bi-chevron-compact-down"></i>
+                                        </div>
+                                        <div class="card-body">
+                                             <h5 class="card-title">
+                                                  <div class="img">
+                                                       <img src="img/bar-chart.png" alt="">
+                                                       Top sản phẩm
+                                                  </div></span>
+                                             </h5>
+                                             <div class="row">
+                                                  <div class="product">
+                                                       <div class="product-item">
+                                                            <img src="img/Rectangle 39.png" alt="">
+                                                            <div class="product-text">
+                                                                 <h5>10S21TSH019CR2</h5>
+                                                                 <p>Quantity: 7</p>
+                                                                 <p>Revenue: 1.043M</p>
+                                                                 <p>Gender: Men</p>
+                                                                 <p>Core: Core</p>
+                                                            </div>
+                                                       </div>
+                                                       <div class="product-item">
+                                                            <img src="img/Rectangle 40.png" alt="">
+                                                            <div class="product-text">
+                                                                 <h5>10S21TSH019CR2</h5>
+                                                                 <p>Quantity: 7</p>
+                                                                 <p>Revenue: 1.043M</p>
+                                                                 <p>Gender: Men</p>
+                                                                 <p>Core: Core</p>
+                                                            </div>
+                                                       </div>
+                                                       <div class="product-item">
+                                                            <img src="img/Rectangle 40.png" alt="">
+                                                            <div class="product-text">
+                                                                 <h5>10S21TSH019CR2</h5>
+                                                                 <p>Quantity: 7</p>
+                                                                 <p>Revenue: 1.043M</p>
+                                                                 <p>Gender: Men</p>
+                                                                 <p>Core: Core</p>
+                                                            </div>
+                                                       </div>
+                                                       <div class="product-item">
+                                                            <img src="img/Rectangle 40.png" alt="">
+                                                            <div class="product-text">
+                                                                 <h5>10S21TSH019CR2</h5>
+                                                                 <p>Quantity: 7</p>
+                                                                 <p>Revenue: 1.043M</p>
+                                                                 <p>Gender: Men</p>
+                                                                 <p>Core: Core</p>
+                                                            </div>
+                                                       </div>
+                                                       <div class="product-item">
+                                                            <img src="img/Rectangle 40.png" alt="">
+                                                            <div class="product-text">
+                                                                 <h5>10S21TSH019CR2</h5>
+                                                                 <p>Quantity: 7</p>
+                                                                 <p>Revenue: 1.043M</p>
+                                                                 <p>Gender: Men</p>
+                                                                 <p>Core: Core</p>
+                                                            </div>
+                                                       </div>
+
+                                                       <div class="product-item">
+                                                            <img src="img/Rectangle 40.png" alt="">
+                                                            <div class="product-text">
+                                                                 <h5>10S21TSH019CR2</h5>
+                                                                 <p>Quantity: 7</p>
+                                                                 <p>Revenue: 1.043M</p>
+                                                                 <p>Gender: Men</p>
+                                                                 <p>Core: Core</p>
+                                                            </div>
+                                                       </div>
+                                                       
+                                                       
+                                                  </div>
+                                                  <div class="product-popup">
+                                                       <span>&times;</span>
+                                                       <div class="popup-image">
+                                                            <div class="popup-product">
+                                                                 <div class="popup_img">
+                                                                      <img id=featured src="img/Rectangle 40.png">
+                                                                      <div id="slide-wrapper">
+                                                                           <img id="slideLeft" class="arrow"
+                                                                                src="img/arrow-left.png">
+                                                                           <div id="slider">
+                                                                                <img class="thumbnail active"
+                                                                                     src="img/Rectangle 40.png">
+                                                                                <img class="thumbnail"
+                                                                                     src="img/Rectangle 39.png">
+                                                                                <img class="thumbnail"
+                                                                                     src="img/Rectangle 39.png">
+                                                                                <img class="thumbnail"
+                                                                                     src="img/Rectangle 39.png">
+                                                                                <img class="thumbnail"
+                                                                                     src="img/Rectangle 39.png">
+                                                                                <img class="thumbnail"
+                                                                                     src="img/Rectangle 39.png">
+                                                                                <img class="thumbnail"
+                                                                                     src="img/Rectangle 39.png">
+                                                                           </div>
+                                                                           <img id="slideRight" class="arrow"
+                                                                                src="img/arrow-right.png">
+                                                                      </div>
+                                                                 </div>
+                                                                 <!-- <div class="popup-text">
+                                                                      <h2>
+                                                                           Quần short
+                                                                      </h2>
+                                                                      <div>
+                                                                           <div class="popup-size">
+                                                                                <h5>Size:</h5>
+                                                                                <ul class="option_size">
+                                                                                     <li class="--width: 10%">xs
+                                                                                     </li>
+                                                                                     <li class="--width: 10%">s
+                                                                                     </li>
+                                                                                     <li class="--width: 10%">m
+                                                                                     </li>
+                                                                                     <li class="--width: 10%">l
+                                                                                     </li>
+                                                                                     <li class="--width: 10%">xl
+                                                                                     </li>
+                                                                                     <li class="--width: 10%">xxl
+                                                                                     </li>
+                                                                                </ul>
+                                                                           </div>
+                                                                           <div class="popup-color">
+                                                                                <h5>Color:</h5>
+                                                                                <ul class="option_color">
+                                                                                     <li class="--product_color">a</li>
+                                                                                     <li class="--product_color">a</li>
+                                                                                     <li class="--product_color">a</li>
+                                                                                     <li class="--product_color">a</li>
+                                                                                     <li class="--product_color">a</li>
+                                                                                     <li class="--product_color">a</li>
+                                                                                     <li class="--product_color">a</li>
+                                                                                </ul>
+                                                                           </div>
+                                                                      </div>
+                                                                      <div class="statistical">
+                                                                           <div class="stat_detail">
+                                                                                <div>
+                                                                                     <label>ASP: </label>
+                                                                                     <p>300k</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                     <label>UPT:</label>
+                                                                                     <p>300k</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                     <label>Form:</label>
+                                                                                     <p>300k</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                     <label>Color: </label>
+                                                                                     <p>300k</p>
+                                                                                </div>
+                                                                           </div>
+                                                                           <div class="stat_scroll">
+                                                                                <div>
+                                                                                     <label>PGCode</label>
+                                                                                     <p>10PL</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                     <label>Cate</label>
+                                                                                     <p>1</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                     <label>Cate</label>
+                                                                                     <p>1</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                     <label>Cate</label> 
+                                                                                     <p>1</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                     <label>Cate</label>
+                                                                                     <p>1</p>
+                                                                                </div>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div> -->
+                                                            </div>
+                                                            <div class="popup-revenue">
+                                                                 <table>
+                                                                      <thead>
+                                                                           <tr>
+                                                                                <th>item</th>
+                                                                                <th>Color</th>
+                                                                                <th>size</th>
+                                                                                <th>Quantity</th>
+                                                                                <th>revenue</th>
+                                                                           </tr>
+                                                                      </thead>
+                                                                      <tbody>
+                                                                           <tr>
+                                                                                <td>1</td>
+                                                                                <td>red</td>
+                                                                                <td>M</td>
+                                                                                <td>20</td>
+                                                                                <td>200</td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                                <td>1</td>
+                                                                                <td>red</td>
+                                                                                <td>M</td>
+                                                                                <td>20</td>
+                                                                                <td>200</td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                                <td>1</td>
+                                                                                <td>red</td>
+                                                                                <td>M</td>
+                                                                                <td>20</td>
+                                                                                <td>200</td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                                <td>1</td>
+                                                                                <td>red</td>
+                                                                                <td>M</td>
+                                                                                <td>20</td>
+                                                                                <td>200</td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                                <td>1</td>
+                                                                                <td>red</td>
+                                                                                <td>M</td>
+                                                                                <td>20</td>
+                                                                                <td>200</td>
+                                                                           </tr>
+                                                                      </tbody>
+                                                                 </table>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </section>
+     </main>
+
+     <footer id="footer" class="footer">
+
+     </footer>
+     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+               class="bi bi-arrow-up-short"></i></a>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+          integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="js/apexcharts.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/chart.min.js"></script>
+     <script src="js/echarts.min.js"></script>
+     <script src="js/quill.min.js"></script>
+     <script src="js/simple-datatables.js"></script>
+     <script src="js/tinymce.min.js"></script>
+     <script src="js/validate.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/chartjs.js"></script>
+     <script src="js/scripts.js"></script>
+     <script src="js/popup.js"></script>
+     <script>
+          window.onload = () => {
+               console.log(document.querySelector("#item-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+          };
+          getUniqueValuesFromColumn()
+     </script>
+     <script type="text/javascript">
+          let thumbnails = document.getElementsByClassName('thumbnail')
+          let activeImages = document.getElementsByClassName('active')
+          for (var i = 0; i < thumbnails.length; i++) {
+               thumbnails[i].addEventListener('mouseover', function () {
+                    // console.log(activeImages)
+                    if (activeImages.length > 0) {
+                         activeImages[0].classList.remove('active')
+                    }
+                    this.classList.add('active')
+                    document.getElementById('featured').src = this.src
+               })
+          }
+          let buttonRight = document.getElementById('slideRight');
+          let buttonLeft = document.getElementById('slideLeft');
+          buttonLeft.addEventListener('click', function () {
+               document.getElementById('slider').scrollLeft -= 180
+          })
+          buttonRight.addEventListener('click', function () {
+               document.getElementById('slider').scrollLeft += 180
+          })
+
+     </script>
+</body>
+
+</html>

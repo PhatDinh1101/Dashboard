@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Getting Started with Chart JS with www.chartjs3.com</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+          }
+
+          .chartMenu {
+               width: 100vw;
+               height: 40px;
+               background: #1A1A1A;
+               color: rgba(54, 162, 235, 1);
+          }
+
+          .chartMenu p {
+               padding: 10px;
+               font-size: 20px;
+          }
+
+          .chartCard {
+               width: 100vw;
+               height: calc(100vh - 40px);
+               background: rgba(54, 162, 235, 0.2);
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          .chartBox {
+               width: 800px;
+               padding: 20px;
+               border-radius: 20px;
+               border: solid 3px rgba(54, 162, 235, 1);
+               background: white;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="chartMenu">
+          <p>WWW.CHARTJS3.COM (Chart JS <span id="chartVersion"></span>)</p>
+     </div>
+     <div class="chartCard">
+          <div class="chartBox">
+               <canvas id="myChart"></canvas>
+               <input type="month"/>
+               <select onchange="filterChart(this)">
+                    <option>Please select</option>
+                    <option value="7"> 7 day last </option>
+                    <option value="30"> 30 day last </option>
+                    <option value="1">1 month</option>
+                    <option value="2">2 month</option>
+                    <option value="12">12 month</option>
+               </select>
+               <button onclick="reset()">Reset</button>
+          </div>
+     </div>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+     <!-- <script
+          src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/luxon@^2"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@^1"></script>
+     <script>
+          // setup 
+          const data = {
+               labels: ['2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05', '2023-01-30'],
+               datasets: [{
+                    label: 'Weekly Sales',
+                    data: [18, 12, 6, 6, 10,10,10,10,10,10,01,01,01,01],
+                    backgroundColor: [
+                         'rgba(255, 26, 104, 0.2)',
+                    
+                    ],
+                    borderColor: [
+                         'rgba(255, 26, 104, 0.2)',
+                  
+                    ],
+                    borderWidth: 1
+               },
+               {
+                    label: 'Shopee',
+                    data: [5, 10, 15, 20],
+                    backgroundColor: ['#a41010'
+                    ],
+                    borderColor: ['#a41010'
+                    ],
+                    borderWidth: 1
+               },
+               {
+                    label: 'Lazada',
+                    data: [8, 25, 3, 10],
+                    backgroundColor: [
+                         '#9fa800'
+                    ],
+                    borderColor: [
+                         '#9fa800'
+                    ],
+                    borderWidth: 1
+               }]
+          };
+
+          // config 
+          const config = {
+               type: 'bar',
+               data,
+               options: {
+                    scales: {
+                         x: {
+                              min: '2023-01-01',
+                              max: new Date(),
+                              type: 'time',
+                              time: {
+                                   unit: 'day'
+                              }
+                         },
+                         y: {
+                              beginAtZero: true
+                         }
+                    }
+               }
+          };
+
+          // render init block
+          const myChart = new Chart(
+               document.getElementById('myChart'),
+               config
+          );
+          function filterChart(month) {
+               console.log(month.value)
+               console.log()
+               
+               myChart.config.options.scales.x.min = luxon.DateTime.now().plus({ months: -month.value }).toISODate();
+               myChart.config.options.scales.x.max = luxon.DateTime.now().toISODate();
+               myChart.update();
+          }
+          // function filterChart(date) {
+          //      console.log(date.value);
+          //      const year = date.value.substring(0, 4);
+          //      const month = date.value.substring(5, 7);
+          //      console.log(month)
+
+          //      const lastDay = (y, m) => {
+          //           return new Date(y, m, 0).getDate()
+          //      };
+
+
+          //      const startDate = `${date.value}-01`;
+          //      const endDate = `${date.value}-${lastDay(year, month)}`;
+
+          //      myChart.config.options.scales.x.min = startDate;
+          //      myChart.config.options.scales.x.max = endDate;
+          //      myChart.update();
+          // }
+
+          function reset() {
+               myChart.config.options.scales.x.min = '2023-01-01';
+               myChart.config.options.scales.x.max = '2023-12-31';
+               myChart.update();
+          }
+
+          // Instantly assign Chart.js version
+          const chartVersion = document.getElementById('chartVersion');
+          chartVersion.innerText = Chart.version;
+     </script>
+
+</body>
+
+</html>

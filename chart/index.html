@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Doanh số bán hàng heo</title>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+     <h2>Doanh số bán hàng heo</h2>
+     <canvas id="myChart"></canvas>
+     <script src="app.js"></script>
+</body>
+
+</html>
+<script>
+     const url = "https://example.com/data.json"; // Đường dẫn tới JSON file
+     var data = [
+          {
+               "id": 24,
+               "title": "BCOM",
+               "start": "2014-08-05 12:59:00 PM",
+               "end": "2014-08-05 2:59:00 PM",
+               "description": "mcom",
+               "DIFF": 120
+          },
+          {
+               "id": 26,
+               "title": "MCOM",
+               "start": "2014-08-10 12:59:00 PM",
+               "end": "2014-08-10 4:59:00 PM",
+               "description": "mcom",
+               "DIFF": 240
+          },
+          {
+               "id": 29,
+               "title": "MCOM",
+               "start": "2014-08-11 12:59:00 PM",
+               "end": "2014-08-11 8:59:00 PM",
+               "description": "mcom",
+               "DIFF": 480
+          },
+          {
+               "id": 30,
+               "title": "MCOM",
+               "start": "2014-08-13 12:59:00 PM",
+               "end": "2014-08-13 4:59:00 PM",
+               "description": "mcom",
+               "DIFF": 240
+          }
+     ];
+     $.each(data, function (i, point) {
+          point.y = point.data;
+     });
+     $('#container').highcharts({
+          chart: {
+               plotBackgroundColor: null,
+               plotBorderWidth: 1,//null,
+               plotShadow: false
+          },
+          title: {
+               text: 'Browser market shares at a specific website, 2014'
+          },
+          tooltip: {
+               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          },
+          plotOptions: {
+               pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                         enabled: true,
+                         format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                         style: {
+                              color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                         }
+                    }
+               }
+          },
+          series: [{
+               type: 'pie',
+               name: 'Browser share',
+               data: data
+          }]
+     });
+</script>

@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2023-03-01",
+    "Shopee": 100,
+    "Lazada": 200,
+    "Website": 300,
+    "All": 600
+  },
+  {
+    "date": "2023-03-02",
+    "Shopee": 200,
+    "Lazada": 300,
+    "Website": 400,
+    "All": 900
+  },
+  {
+    "date": "2023-03-03",
+    "Shopee": 300,
+    "Lazada": 400,
+    "Website": 500,
+    "All": 1200
+  },
+  {
+    "date": "2023-03-04",
+    "Shopee": 400,
+    "Lazada": 500,
+    "Website": 600,
+    "All": 1500
+  },
+  {
+    "date": "2023-03-05",
+    "Shopee": 500,
+    "Lazada": 600,
+    "Website": 700,
+    "All": 1200
+  }
+]
