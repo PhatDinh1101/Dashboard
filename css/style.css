@@ -284,7 +284,9 @@ h6 {
 .card-body {
   padding: 0 20px 20px 20px;
 }
-
+.card-body_2 .card-title {
+  padding: 20px;
+}
 .card-img-overlay {
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -839,6 +841,11 @@ h6 {
   margin-left: 75px;
   font-size: 30px;
 }
+@media screen and (max-width: 768px) {
+  .icon-bar {
+    margin-left: -20px;
+  }
+}
 /*--------------------------------------------------------------
   # Dashboard
   --------------------------------------------------------------*/
@@ -928,7 +935,7 @@ h6 {
 }
 #customLegend,
 #customLegend_2 {
-  margin: 0 -30%;
+  margin: 0 -23%;
 }
 #customLegend ul {
   display: flex;
@@ -1099,13 +1106,10 @@ table {
 table th {
   position: sticky;
   top: 0px;
-  background-color: #133b5c;
-  color: rgb(241, 245, 179);
-  text-align: center;
+  color: #000;
   font-weight: normal;
   font-size: 14px;
-  outline: 0.7px solid black;
-  border: 1.5px solid black;
+  /* outline: 0.7px solid black; */
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -1118,7 +1122,6 @@ table td {
 table td {
   text-align: left;
   font-size: 15px;
-  border: 1px solid rgb(177, 177, 177);
   padding: 7px;
 }
 table th:first-child,
@@ -1411,7 +1414,7 @@ ul {
   left: 50%;
   border: 5px solid #fff;
   border-radius: 5px;
-  width: 50%;
+  /* width: 50%; */
   object-fit: cover;
   background: #fff;
   transform: translate(-50%, -50%);
@@ -1419,16 +1422,17 @@ ul {
 .product-popup .popup-image .popup-product {
   display: flex;
   list-style: none;
-  width: 52.25rem;
+  /* width: 52.25rem; */
   margin-bottom: 5px;
 }
 .product-popup .popup-image .popup-product .popup_img {
-  width: 30%;
+  width: 35%;
 }
 .product-popup .popup-image .popup-product .popup-text {
-  width: 70%;
+  width: 65%;
+  padding: 10px;
 }
-/* ul.popup_item {
+ul.popup_item {
   display: flex;
   padding-left: 0 !important;
   margin: 5px;
@@ -1440,8 +1444,9 @@ ul.popup_item li {
 .popup-color {
   display: flex;
 }
-.popup-size h5 {
-  width: 10%;
+.popup-size h5,
+.popup-color h5 {
+  width: 15%;
 }
 .popup-size ul.option_size,
 .popup-color ul.option_color {
@@ -1465,7 +1470,7 @@ ul.popup_item li {
 }
 .statistical .stat_detail,
 .statistical .stat_scroll {
-  width: 45%;
+  width: 50%;
 }
 .statistical .stat_detail div,
 .statistical .stat_scroll div {
@@ -1476,23 +1481,26 @@ ul.popup_item li {
   width: 30%;
 }
 .statistical .stat_scroll {
-  height: 100px;
+  height: 150px;
   overflow: auto;
 }
-*/
+
 .popup-revenue {
   height: 200px;
   overflow-y: auto;
-} 
-
+}
 
 @media (max-width: 768px) {
   .product-popup .popup-image .popup-product {
     display: block;
   }
-  .product-popup img {
-    width: 30%;
+  .product-popup .popup-image .popup-product .popup_img,
+  .product-popup .popup-image .popup-product .popup-text {
+    width: 100%;
   }
+  /* .product-popup img {
+    width: 30%;
+  } */
 }
 .column {
   padding: 10px;
@@ -1564,6 +1572,43 @@ ul.popup_item li {
   }
   .product-popup .popup-image {
     width: 100% !important;
+  }
+  .thumbnail {
+    max-height: 50px;
+  }
+}
+.table1 th:nth-child(1),
+.table1 td:nth-child(1)  {
+  width: 5%;
+  text-align: center;
+}
+.table1 th:nth-child(2) {
+  width: 20%;
+}
+.table1 th:nth-child(3) {
+  width: 50%;
+}
+.table1 th:nth-child(4) {
+  width: 15%;
+}
+.table1 th:nth-child(5) {
+  width: 5%;
+}
+
+.table1 th:nth-child(6) {
+  width: 15%;
+}
+.table1 th,
+.table1 td {
+  border-bottom: 2px solid #e4e3e3;
+}
+.table1 tr:hover td {
+  background-color: #f8f9fa;
+}
+
+@media screen and (max-width: 768px) {
+  .table1 {
+    overflow-x: auto;
   }
 }
 
