@@ -254,7 +254,7 @@ h6 {
 .card {
   margin-bottom: 15px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
 
@@ -267,8 +267,8 @@ h6 {
 }
 
 .card-title {
-  padding: 20px 0 15px 0;
-  font-size: 18px;
+  padding: 17px;
+  font-size: 15px;
   font-weight: 500;
   color: #414860;
   font-family: "Poppins", sans-serif;
@@ -282,11 +282,9 @@ h6 {
   font-weight: 400;
 }
 .card-body {
-  padding: 0 20px 20px 20px;
+  padding: 0 15px 20px 15px;
 }
-.card-body_2 .card-title {
-  padding: 20px;
-}
+
 .card-img-overlay {
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -701,6 +699,7 @@ h6 {
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 200px;
 }
 .sidebar-nav li.nav-item:last-child {
   position: absolute;
@@ -709,6 +708,7 @@ h6 {
 
 .sidebar-nav li.nav-item:last-child .dropdown-toggle {
   display: flex;
+  align-items: center;
 }
 
 .sidebar-nav li:last-child img {
@@ -826,25 +826,14 @@ h6 {
   background: #dd4b39;
   color: white;
 }
-
-.linkedin {
-  background: #007bb5;
-  color: white;
-}
-
 .youtube {
-  background: #bb0000;
+  background: white;
   color: white;
 }
 
 .content {
   margin-left: 75px;
   font-size: 30px;
-}
-@media screen and (max-width: 768px) {
-  .icon-bar {
-    margin-left: -20px;
-  }
 }
 /*--------------------------------------------------------------
   # Dashboard
@@ -983,6 +972,14 @@ h6 {
   font-size: 13px;
   font-weight: 800;
 }
+@media screen and (max-width: 768px) {
+  .icon-bar {
+    margin-left: -23px;
+  }
+  .mobileChart_Box .mobileChart_note {
+    padding: 0;
+  }
+}
 /* endchartjs */
 .text-chart {
   text-align: center;
@@ -1106,10 +1103,12 @@ table {
 table th {
   position: sticky;
   top: 0px;
-  color: #000;
+  background-color: #133b5c;
+  color: rgb(241, 245, 179);
   font-weight: normal;
   font-size: 14px;
-  /* outline: 0.7px solid black; */
+  outline: 0.7px solid black;
+  border: 1.5px solid black;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -1122,6 +1121,7 @@ table td {
 table td {
   text-align: left;
   font-size: 15px;
+  border: 1px solid rgb(177, 177, 177);
   padding: 7px;
 }
 table th:first-child,
@@ -1372,20 +1372,32 @@ ul {
 }
 .product .product-item {
   width: 20%;
-  padding: 0 1%;
+  padding: 5px;
 }
 .product .product-item img {
   cursor: pointer;
   width: 100%;
 }
+.product .product-item .product-text {
+  background: #f8f9fa;
+}
 .product .product-item .product-text h5 {
-  padding: 5px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px;
+  margin: 0;
+}
+.product .product-item .product-text .product-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.product .product-item .product-text .product-row .product-col-2 p {
+  text-align: right;
 }
 .product .product-item .product-text p {
   margin-bottom: 0;
-  padding: 0 5px;
+  font-size: 13px;
 }
 
 .product-popup {
@@ -1400,13 +1412,14 @@ ul {
 }
 .product-popup span {
   position: absolute;
-  top: 0;
-  right: 30px;
-  font-size: 60px;
+  top: -28px;
+  right: 14px;
+  font-size: 57px;
   font-weight: bolder;
-  color: #fff;
+  color: #141414;
   cursor: pointer;
   z-index: 1000;
+  height: 61px;
 }
 .product-popup .popup-image {
   position: absolute;
@@ -1422,7 +1435,6 @@ ul {
 .product-popup .popup-image .popup-product {
   display: flex;
   list-style: none;
-  /* width: 52.25rem; */
   margin-bottom: 5px;
 }
 .product-popup .popup-image .popup-product .popup_img {
@@ -1430,7 +1442,7 @@ ul {
 }
 .product-popup .popup-image .popup-product .popup-text {
   width: 65%;
-  padding: 10px;
+  padding: 5px 10px;
 }
 ul.popup_item {
   display: flex;
@@ -1443,15 +1455,18 @@ ul.popup_item li {
 .popup-size,
 .popup-color {
   display: flex;
+  padding: 5px 0;
 }
 .popup-size h5,
 .popup-color h5 {
   width: 15%;
+  font-size: 15px;
 }
 .popup-size ul.option_size,
 .popup-color ul.option_color {
   width: 90%;
   padding-left: 0rem;
+  margin-bottom: 0rem;
 }
 
 .popup-size .option_size,
@@ -1467,6 +1482,8 @@ ul.popup_item li {
 .statistical {
   display: flex;
   width: 100%;
+  overflow: auto;
+  height: 150px;
 }
 .statistical .stat_detail,
 .statistical .stat_scroll {
@@ -1478,19 +1495,14 @@ ul.popup_item li {
 }
 .statistical .stat_detail div label,
 .statistical .stat_scroll div label {
-  width: 30%;
+  width: 40%;
 }
-.statistical .stat_scroll {
-  height: 150px;
-  overflow: auto;
-}
-
 .popup-revenue {
   height: 200px;
   overflow-y: auto;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .product-popup .popup-image .popup-product {
     display: block;
   }
@@ -1498,15 +1510,35 @@ ul.popup_item li {
   .product-popup .popup-image .popup-product .popup-text {
     width: 100%;
   }
-  /* .product-popup img {
-    width: 30%;
-  } */
+  .popup-size h5,
+  .popup-color h5 {
+    font-size: 14px;
+  }
+  #slide-wrapper {
+    min-height: 60px !important;
+  }
+  .statistical {
+    height: 78px;
+  }
+  .statistical .stat_detail div p,
+  .statistical .stat_scroll div p {
+    margin-bottom: 5px;
+  }
+  .statistical .stat_detail div label,
+  .statistical .stat_scroll div label,
+  .statistical .stat_detail div p,
+  .statistical .stat_scroll div p {
+    font-size: 11px;
+  }
+  #featured {
+    padding: 0 75px;
+  }
 }
 .column {
   padding: 10px;
 }
 #featured {
-  min-width: 100%;
+  min-width: 50%;
   object-fit: cover;
   cursor: pointer;
 }
@@ -1538,7 +1570,7 @@ ul.popup_item li {
   overflow-x: auto;
 }
 #slider::-webkit-scrollbar {
-  width: 1;
+  width: 1px;
   height: 5px;
 }
 #slider::-webkit-scrollbar-track {
@@ -1560,15 +1592,11 @@ ul.popup_item li {
   cursor: pointer;
   transition: 0.3s;
 }
-.arrow:hover {
-  opacity: 0.5;
-  width: 35px;
-  height: 35px;
-}
+
 @media screen and (max-width: 768px) {
   .product .product-item {
     width: 50% !important;
-    padding: 0 2%;
+    padding: 5px 2%;
   }
   .product-popup .popup-image {
     width: 100% !important;
@@ -1577,8 +1605,11 @@ ul.popup_item li {
     max-height: 50px;
   }
 }
+.table1 td {
+  padding: 10px;
+}
 .table1 th:nth-child(1),
-.table1 td:nth-child(1)  {
+.table1 td:nth-child(1) {
   width: 5%;
   text-align: center;
 }
@@ -1598,6 +1629,15 @@ ul.popup_item li {
 .table1 th:nth-child(6) {
   width: 15%;
 }
+.tb-sales th {
+  background: none;
+  color: #000;
+  border: none;
+  outline: none;
+}
+.table1 td {
+  border: none;
+}
 .table1 th,
 .table1 td {
   border-bottom: 2px solid #e4e3e3;
@@ -1605,13 +1645,11 @@ ul.popup_item li {
 .table1 tr:hover td {
   background-color: #f8f9fa;
 }
-
 @media screen and (max-width: 768px) {
   .table1 {
     overflow-x: auto;
   }
 }
-
 /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
