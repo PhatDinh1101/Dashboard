@@ -1444,6 +1444,7 @@ ul {
   width: 65%;
   padding: 5px 10px;
 }
+
 ul.popup_item {
   display: flex;
   padding-left: 0 !important;
@@ -1512,7 +1513,7 @@ ul.popup_item li {
   }
   .popup-size h5,
   .popup-color h5 {
-    font-size: 14px;
+    font-size: 9px;
   }
   #slide-wrapper {
     min-height: 60px !important;
@@ -1531,14 +1532,23 @@ ul.popup_item li {
     font-size: 11px;
   }
   #featured {
-    padding: 0 75px;
+    padding: 0 65px;
   }
+  .popup-product .popup-text h2 {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  .option_size li,
+  .option_color li {
+    font-size: 8px;
+  }
+
 }
 .column {
   padding: 10px;
 }
 #featured {
-  min-width: 50%;
+  min-width: 100%;
   object-fit: cover;
   cursor: pointer;
 }
