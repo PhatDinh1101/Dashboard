@@ -110,7 +110,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99999;
+  z-index: 100;
   background: #4154f1;
   width: 40px;
   height: 40px;
@@ -1106,7 +1106,7 @@ table th {
   background-color: #133b5c;
   color: rgb(241, 245, 179);
   font-weight: normal;
-  font-size: 14px;
+  font-size: 15px;
   outline: 0.7px solid black;
   border: 1.5px solid black;
   font-weight: 800;
@@ -1114,9 +1114,7 @@ table th {
 }
 table th,
 table td {
-  padding: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 4px 5px;
 }
 table td {
   text-align: left;
@@ -1442,7 +1440,7 @@ ul {
 }
 .product-popup .popup-image .popup-product .popup-text {
   width: 65%;
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 
 ul.popup_item {
@@ -1513,7 +1511,7 @@ ul.popup_item li {
   }
   .popup-size h5,
   .popup-color h5 {
-    font-size: 9px;
+    font-size: 10px;
   }
   #slide-wrapper {
     min-height: 60px !important;
@@ -1538,11 +1536,22 @@ ul.popup_item li {
     margin-bottom: 0;
     font-size: 14px;
   }
-  .option_size li,
-  .option_color li {
-    font-size: 8px;
+  .popup-revenue {
+    height: 120px;
   }
 
+  .popup-revenue table th {  
+    font-size: 11px;
+  }
+  .popup-revenue table td {
+    font-size: 10px;
+  }
+  .product .product-item .product-text h5 {
+    font-size: 12px;
+  }
+  .product .product-item .product-text p {
+    font-size: 11px;
+  }
 }
 .column {
   padding: 10px;
