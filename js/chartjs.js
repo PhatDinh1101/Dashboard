@@ -53,9 +53,8 @@ $(document).ready(function () {
       },
       options: {
         responsive: true,
-        // maintainAspectRatio: false,
-        width: 300, // đặt chiều rộng là 500px
-        height: 300, // đặt chiều cao là 300px
+        width: 300,
+        height: 300, 
         interaction: {
           mode: "index",
         },

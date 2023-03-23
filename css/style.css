@@ -898,7 +898,6 @@ h6 {
   appearance: none;
   font-size: 14px;
   font-weight: 600;
-  width: 150px;
 }
 
 .select-box select::-ms-expand {
@@ -1458,7 +1457,7 @@ ul.popup_item li {
 }
 .popup-size h5,
 .popup-color h5 {
-  width: 15%;
+  width: 10%;
   font-size: 15px;
 }
 .popup-size ul.option_size,
@@ -1474,9 +1473,14 @@ ul.popup_item li {
 }
 .option_size li,
 .option_color li {
-  background: red;
-  margin: 0 5px;
+  background: var(--product_color);
+  width: var(--width);
+  color: #fff;
+  font-weight: 700;
   padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
 }
 .statistical {
   display: flex;
