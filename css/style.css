@@ -1495,6 +1495,7 @@ ul.popup_item li {
 .statistical .stat_detail div label,
 .statistical .stat_scroll div label {
   width: 40%;
+  font-weight: 600;
 }
 .popup-revenue {
   height: 200px;
@@ -1551,6 +1552,9 @@ ul.popup_item li {
   }
   .product .product-item .product-text p {
     font-size: 11px;
+  }
+  .product-popup span {
+    top: -14px;
   }
 }
 .column {
